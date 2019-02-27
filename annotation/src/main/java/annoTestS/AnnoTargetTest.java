@@ -1,13 +1,3 @@
-/**
- * Copyright (C), 2015-2019, XXX有限公司
- * FileName: AnnoTargetTest
- * Author:   XYB
- * Date:     2019/2/14 19:30
- * Description: target注解测试
- * History:
- * <author>          <time>          <version>          <desc>
- * 作者姓名           修改时间           版本号              描述
- */
 package annoTestS;
 
 import annoIntroF.annoTarget.*;

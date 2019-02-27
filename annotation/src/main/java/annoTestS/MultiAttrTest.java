@@ -13,9 +13,10 @@ package annoTestS;
 import annoIntroF.annoAttr.MultiAttrAnno;
 import annoIntroF.annoAttr.NoAttrAnno;
 import annoIntroF.annoAttr.OneAttrAnno;
+import annoIntroF.annoAttr.OneValueAttrAnno;
 
 /**
- * 〈一句话功能简述〉<br> 
+ * 〈一句话功能简述〉<br>
  * 〈多属性注解测试〉
  *
  * @author XYB
@@ -31,18 +32,20 @@ public class MultiAttrTest {
 
 }
 
-// 注解单属性
-@OneAttrAnno(value = "5")// 没有默认值必须写
+// 注解单属性，没有默认值必须写
+@OneAttrAnno(value = "5")
 class OneAttrTest {
 
 }
 
-@OneAttrAnno //有默认值可以不写
+//有默认值可以不写
+@OneAttrAnno
 class OneAttrTest1 {
 
 }
 
-@OneAttrAnno("5") // 但当属性名为value，value可不写，为其它则必须写
+// 但当属性名为value，value可不写，为其它则必须写
+@OneAttrAnno("5")
 class OneAttrTest2 {
 
 }
@@ -50,5 +53,11 @@ class OneAttrTest2 {
 // 注解无属性
 @NoAttrAnno
 class NoAttrTest {
+
+}
+
+// 一个value，一个其它属性名，则可以只写另一个属性名
+@OneValueAttrAnno("attr")
+class OneValueAttrTest {
 
 }
