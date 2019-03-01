@@ -1,0 +1,2 @@
+1.一个类在JVM 中只会有一个 Class 实例，即不管new了几个Person，他们的.class是一样的。
+2.反射设置私有属性或者调用私有方法，记得设置field.setAccessible(true)，method.setAccessible(true);

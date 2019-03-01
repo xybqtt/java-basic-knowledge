@@ -1,14 +1,21 @@
 package bean;
 
-public class Person {
+@MyAnno
+public class Person extends Parent{
 
     private String name;
+
+    public static final String QUEUE = "11";
 
     public int age;
 
     protected double sal;
 
     public Person() {
+    }
+
+    private Person(String name){
+        this.name = name;
     }
 
     public String getName() {
@@ -23,7 +30,7 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age, String name) {
         this.age = age;
     }
 
@@ -33,6 +40,10 @@ public class Person {
 
     public void setSal(double sal) {
         this.sal = sal;
+    }
+
+    private String testPrivate(){
+        return "";
     }
 
     @Override
