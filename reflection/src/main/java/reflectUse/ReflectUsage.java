@@ -47,6 +47,10 @@ public class ReflectUsage {
         // 获取父类信息
         printSuperFields(cls);
 
+        // 获取classloader，当由启动类装载器装载时，返回null
+        ClassLoader classLoader = cls.getClassLoader();
+        System.out.println(classLoader);
+
 
     }
 
